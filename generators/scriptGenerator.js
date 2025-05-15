@@ -1,14 +1,14 @@
-// generators/scriptGenerator.js
+// generators/scriptGenerator.js - CREATIVE AGENT
 
 const { selectBestTone } = require('../utils/toneSelector');
 const { selectBestStructure } = require('../utils/structureSelector');
 const { buildPrompt } = require('../utils/promptBuilder');
-const { logToFile, logJSON } = require('../utils/logger');
+const { logToFile } = require('../utils/logger');
 const fs = require('fs');
 const path = require('path');
 
-// Simulated GPT function (replace with real OpenAI or LLM call)
-async function generateFromPrompt(prompt) {
+// Simulated LLM call (replace with OpenAI or actual agent logic)
+async function generateFromLLM(prompt) {
   return `Generated Script Based On:\n${prompt}`;
 }
 
@@ -17,7 +17,7 @@ async function generateScript({ niche, hook, cta, baseIdea, fewShot = [] }) {
     const tone = selectBestTone(niche);
     const structure = selectBestStructure(niche);
     const prompt = buildPrompt({ tone, structure, niche, hook, cta, fewShot, baseIdea });
-    const script = await generateFromPrompt(prompt);
+    const script = await generateFromLLM(prompt);
 
     const result = {
       niche,
@@ -36,7 +36,7 @@ async function generateScript({ niche, hook, cta, baseIdea, fewShot = [] }) {
 
     return result;
   } catch (err) {
-    logToFile('scriptGenerator.log', `Error: ${err.message}`);
+    logToFile('scriptGenerator.log', `Error generating script: ${err.message}`);
     throw err;
   }
 }
