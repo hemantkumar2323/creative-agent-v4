@@ -1,0 +1,1 @@
+// Placeholder for /api/score.js
