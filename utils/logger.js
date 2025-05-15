@@ -1,4 +1,4 @@
-// utils/logger.js
+// utils/logger.js - CREATIVE AGENT
 
 const fs = require('fs');
 const path = require('path');
@@ -22,7 +22,7 @@ module.exports = {
   logJSON
 };
 
-// utils/promptBuilder.js
+// utils/promptBuilder.js - CREATIVE AGENT
 
 function buildPrompt({ tone, structure, niche, hook, cta, fewShot = [], baseIdea }) {
   const lines = [];
@@ -51,7 +51,7 @@ module.exports = {
   buildPrompt
 };
 
-// utils/toneSelector.js
+// utils/toneSelector.js - CREATIVE AGENT
 
 const fs = require('fs');
 const path = require('path');
@@ -68,7 +68,7 @@ module.exports = {
   selectBestTone
 };
 
-// utils/structureSelector.js
+// utils/structureSelector.js - CREATIVE AGENT
 
 const fs = require('fs');
 const path = require('path');
