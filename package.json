@@ -1,1 +1,24 @@
-// Placeholder for /package.json
+=== package.json - CREATIVE AGENT ===
+```json
+{
+  "name": "creative-agent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "generate": "node api/generate.js",
+    "remix": "node api/remix.js",
+    "score": "node api/score.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "openai": "^4.0.0",
+    "dotenv": "^16.4.5",
+    "winston": "^3.11.0",
+    "express-async-errors": "^3.1.1",
+    "pg": "^8.11.3"      // Added for PostgreSQL (for potential future use)
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
